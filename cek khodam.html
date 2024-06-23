@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!-- saved from url=(0066)file:///C:/Users/Dhilah/Documents/sidqi%20folder/cek%20khodam.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cek khodam</title>
+    <style>
+        /* Gaya tampilan website */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #87CEEB; 
+            transition: background-color #1E90FF;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            max-width: 400px;
+            padding: 20px;
+            background-color: #7ACFA6;
+            border-radius: 8px;
+            box-shadow: 0 7px 7px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.4s ease;
+        }
+        .container:hover {
+            background-color: #1E90FF;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cek Khodam gratis</h1>
+        <form id="khodamForm">
+            <label for="nama">Masukkan Nama:</label>
+            <input type="text" id="nama" name="nama" required="">
+            <button type="submit">Cari Khodam</button>
+        </form>
+        <div id="hasilKhodam"></div>
+    </div>
+
+    <script>
+        document.getElementById("khodamForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+            const inputNama = document.getElementById("nama").value;
+            const khodam = generateKhodam(inputNama); // Fungsi untuk menghasilkan nama khodam
+            document.getElementById("hasilKhodam").textContent = `Khodam untuk nama "${inputNama}": ${khodam}`;
+        });
+
+        // Fungsi untuk menghasilkan nama khodam (contoh sederhana)
+        function generateKhodam(nama) {
+        let hurufAwal = '';
+        if (nama.charAt(2) === 'a' ) {
+            hurufAwal = 'buaya';
+        } else if (nama.charAt(2) === 'b' ) {
+            hurufAwal = 'aligator';
+        } else if (nama.charAt(2) === 'c' ) {
+            hurufAwal = 'canva';
+        } else if (nama.charAt(2) === 'd' ) {
+            hurufAwal = 'gajah hitam';
+        } else if (nama.charAt(2) === 'e' ) {
+            hurufAwal = 'elang jawa';
+        } else if (nama.charAt(2) === 'f' ) {
+            hurufAwal = 'serigala putih';
+        } else if (nama.charAt(2) === 'g' ) {
+            hurufAwal = 'sapi qurban';
+        } else if (nama.charAt(2) === 'h' ) {
+            hurufAwal = 'kambing imut';
+        } else if (nama.charAt(2) === 'i' ) {
+            hurufAwal = 'banteng merah';
+        } else if (nama.charAt(2) === 'j' ) {
+            hurufAwal = 'burung beo';
+        } else if (nama.charAt(2) === 'k' ) {
+            hurufAwal = 'macan hitam';
+        } else if (nama.charAt(2) === 'l' ) {
+            hurufAwal = 'anak abah';
+        } else if (nama.charAt(2) === 'm' ) {
+            hurufAwal = 'kelapa sawit';
+        } else if (nama.charAt(2) === 'n' ) {
+            hurufAwal = 'harimau';
+        } else if (nama.charAt(2) === 'o' ) {
+            hurufAwal = 'ratu selatan';
+        } else if (nama.charAt(2) === 'p' ) {
+            hurufAwal = 'cicak terbang';
+        } else if (nama.charAt(2) === 'q' ) {
+            hurufAwal = 'naga emas';
+        } else if (nama.charAt(2) === 'r' ) {
+            hurufAwal = 'Ai.com';
+        } else if (nama.charAt(2) === 's' ) {
+            hurufAwal = 'kipas badai';
+        } else if (nama.charAt(2) === 't' ) {
+            hurufAwal = 'microsft';
+        } else if (nama.charAt(2) === 'u' ) {
+            hurufAwal = 'ayam kalkun';
+        } else if (nama.charAt(2) === 'v' ) {
+            hurufAwal = 'HTML';
+        } else if (nama.charAt(2) === 'w' ) {
+            hurufAwal = 'capung darat';
+        } else if (nama.charAt(2) === 'x' ) {
+            hurufAwal = 'babi ganas';
+        } else if (nama.charAt(2) === 'y' ) {
+            hurufAwal = 'kucing merah';
+        } else if (nama.charAt(2) === 'z' ) {
+            hurufAwal = 'domba garut';
+        } else {
+            hurufAwal = 'Chat-Gpt';
+        }
+
+        return `adalah ${hurufAwal}`;
+}
+
+// Contoh penggunaan:
+const namaPengguna = 'Rahasia'; // Ganti dengan nama yang diinginkan
+const namaKhodam = generateKhodam(namaPengguna);
+console.log(namaKhodam);
+
+    </script>
+
+
+</body></html>
